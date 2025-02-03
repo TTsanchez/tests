@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Video with Tabs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Фоновое видео -->
+    <video id="bg-video" loop muted>
+        <source src="mini.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <!-- Кнопка Play -->
+    <button id="play-button">▶ Включить видео</button>
+
+    <div class="tabs">
+        <a href="gas.html"><div class="tab" data-tab="1" data-time="65"></div></a>
+        <div class="tab" data-tab="2" data-time="65"><a href="gas.html"></a></div>
+        <div class="tab" data-tab="3" data-time="65"><a href="gas.html"></a></div>
+        <div class="tab" data-tab="4" data-time="65"><a href="gas.html"></a></div>
+        <div class="tab" data-tab="5" data-time="65"><a href="gas.html"></a></div>
+        <div class="tab" data-tab="6" data-time="65"><a href="gas.html"></a></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

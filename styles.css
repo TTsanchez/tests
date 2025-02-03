@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain; /* Видео не будет обрезаться */
+    background-color: black;
+    z-index: -1; /* Видео на заднем плане */
+}
+
+/* Кнопка Play */
+#play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#play-button:hover {
+    background-color: darkred;
+}
+
+.tabs {
+    position: absolute;
+    top: 45%;
+    right: 9.1%;
+    transform: translate(0, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    row-gap: 5vh;
+    column-gap: 2.4vw;
+}
+
+.tab:nth-child(1), .tab:nth-child(2) {
+    margin-bottom: 3vh;
+}
+
+.tab:nth-child(3), .tab:nth-child(4) {
+    margin-bottom: 5vh;
+}
+
+.tab {
+    padding: 4vw 5.2vw;
+    cursor: pointer;
+    border-radius: 1vw;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, border 0.3s;
+    pointer-events: none;
+    border: 2px solid red;
+    background: none;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.tab:hover {
+    border-color: rgba(255, 0, 0, 0.7);
+}
+
+.tab:active {
+    border-color: red;
+}
